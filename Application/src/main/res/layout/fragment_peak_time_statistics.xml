@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/graph_layout"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/current_time"
+            style="@style/TextStyle6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/current_time_string" />
+
+        <View
+            android:id="@+id/sun"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/sun"/>
+
+        <View
+            android:id="@+id/moon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/moon"/>
+
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/peak_graph"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="46dp"
+            android:layout_marginTop="46dp" />
+
+        <TextView
+            android:id="@+id/legend_today"
+            style="@style/TextStyle5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/peak_graph"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_toEndOf="@+id/sun"
+            android:text="@string/legend_today" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_toStartOf="@+id/legend_today"
+            android:background="@drawable/circle_green" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_toStartOf="@+id/legend_yesterday"
+            android:background="@drawable/circle_grey" />
+
+        <TextView
+            android:id="@+id/legend_yesterday"
+            style="@style/TextStyle5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/moon"
+            android:layout_alignTop="@+id/view"
+            android:text="@string/legend_yesterday" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:id="@+id/wake_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/wake_row_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/bed_time_header"
+                    style="@style/TextStyle3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/bed_time"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/bed_time_header" />
+
+                <TextView
+                    android:id="@+id/wake_up_time_header"
+                    style="@style/TextStyle3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/wake_time"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/wake_time"
+                    android:text="@string/wake_up_time_header" />
+
+                <TextView
+                    android:id="@+id/wake_time"
+                    style="@style/TextStyle4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/verticalSep_2"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_toStartOf="@+id/verticalSep_2"
+                    android:text="@string/wake_time" />
+
+                <TextView
+                    android:id="@+id/bed_time"
+                    style="@style/TextStyle4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/wake_time"
+                    android:layout_alignBottom="@+id/wake_time"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="25dp"
+                    android:text="@string/bed_time" />
+
+                <View
+                    android:id="@+id/verticalSep_2"
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="6dp"
+                    android:background="@android:color/darker_gray" />
+
+                <View
+                    android:layout_width="30dp"
+                    android:layout_height="10dp"
+                    android:layout_alignBottom="@+id/wake_time"
+                    android:layout_below="@+id/wake_up_time_header"
+                    android:layout_marginEnd="25dp"
+                    android:layout_toStartOf="@+id/wake_time"
+                    android:background="@drawable/bed_black" />
+
+                <View
+                    android:layout_width="7dp"
+                    android:layout_height="7dp"
+                    android:layout_below="@+id/wake_up_time_header"
+                    android:layout_marginEnd="30dp"
+                    android:layout_toStartOf="@+id/wake_time"
+                    android:background="@drawable/sun_blue" />
+
+                <View
+                    android:layout_width="30dp"
+                    android:layout_height="10dp"
+                    android:layout_alignBottom="@+id/bed_time"
+                    android:layout_below="@+id/wake_up_time_header"
+                    android:layout_marginEnd="25dp"
+                    android:layout_toStartOf="@+id/bed_time"
+                    android:background="@drawable/bed_black" />
+
+                <View
+                    android:layout_width="7dp"
+                    android:layout_height="7dp"
+                    android:layout_below="@+id/bed_time_header"
+                    android:layout_marginEnd="30dp"
+                    android:layout_toStartOf="@+id/bed_time"
+                    android:background="@drawable/moon_blue" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/HorizontalSep_2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/wake_row_one"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/darker_gray" />
+
+            <RelativeLayout
+                android:id="@+id/wake_row_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wake_row_one"
+                android:layout_marginTop="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/bed_time_header_early"
+                    style="@style/TextStyle3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/bed_time_early"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/the_earliest_bed_time_header" />
+
+                <TextView
+                    android:id="@+id/wake_up_time_header_late"
+                    style="@style/TextStyle3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/bed_time_late"
+                    android:text="@string/the_latest_fall_to_sleep_header" />
+
+                <TextView
+                    android:id="@+id/bed_time_early"
+                    style="@style/TextStyle4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/verticalSep_3"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_toStartOf="@+id/verticalSep_3"
+                    android:text="@string/earliest_bed_Time" />
+
+                <TextView
+                    android:id="@+id/bed_time_late"
+                    style="@style/TextStyle4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/bed_time_early"
+                    android:layout_alignBottom="@+id/bed_time_early"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="25dp"
+                    android:text="@string/latest_bed_time" />
+
+                <View
+                    android:id="@+id/verticalSep_3"
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="6dp"
+                    android:background="@android:color/darker_gray" />
+
+                <View
+                    android:layout_width="30dp"
+                    android:layout_height="10dp"
+                    android:layout_alignBottom="@+id/bed_time_early"
+                    android:layout_below="@+id/bed_time_header_early"
+                    android:layout_marginEnd="25dp"
+                    android:layout_toStartOf="@+id/bed_time_early"
+                    android:background="@drawable/bed_black" />
+
+                <View
+                    android:layout_width="7dp"
+                    android:layout_height="7dp"
+                    android:layout_below="@+id/bed_time_header_early"
+                    android:layout_marginEnd="30dp"
+                    android:layout_toStartOf="@+id/bed_time_early"
+                    android:background="@drawable/moon_blue" />
+
+                <View
+                    android:layout_width="30dp"
+                    android:layout_height="10dp"
+                    android:layout_alignBottom="@+id/bed_time_late"
+                    android:layout_below="@+id/bed_time_header_early"
+                    android:layout_marginEnd="25dp"
+                    android:layout_toStartOf="@+id/bed_time_late"
+                    android:background="@drawable/bed_red" />
+
+                <View
+                    android:layout_width="7dp"
+                    android:layout_height="7dp"
+                    android:layout_below="@+id/bed_time_header_early"
+                    android:layout_marginEnd="30dp"
+                    android:layout_toStartOf="@+id/bed_time_late"
+                    android:background="@drawable/moon_red" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/HorizontalSep_4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/wake_row_two"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/darker_gray" />
+
+            <RelativeLayout
+                android:id="@+id/wake_row_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wake_row_two"
+                android:layout_marginTop="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/longest_stand_by_header"
+                    style="@style/TextStyle9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@id/longest_stand_by"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/longest_standby_time_header" />
+
+                <TextView
+                    android:id="@+id/longest_single_use_header"
+                    style="@style/TextStyle9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/longest_single_use"
+                    android:text="@string/longest_single_use_header" />
+
+                <TextView
+                    android:id="@+id/longest_stand_by"
+                    style="@style/TextStyle8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/verticalSep_4"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_toStartOf="@+id/verticalSep_4"
+                    android:text="@string/longest_stand_by" />
+
+                <TextView
+                    android:id="@+id/longest_single_use"
+                    style="@style/TextStyle8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/longest_stand_by"
+                    android:layout_alignBottom="@+id/longest_stand_by"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="25dp"
+                    android:text="@string/longest_single_use" />
+
+                <View
+                    android:id="@+id/verticalSep_4"
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="6dp"
+                    android:background="@android:color/darker_gray" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/HorizontalSep_5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/wake_row_three"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/darker_gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/notificitation_layout"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/wake_layout">
+
+            <TextView
+                android:id="@+id/sleep_text"
+                style="@style/TextStyle7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="13dp"
+                android:text="@string/peak_notification" />
+
+            <View
+                android:id="@+id/HorizontalSep_3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/sleep_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="0dp"
+                android:background="@android:color/darker_gray" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

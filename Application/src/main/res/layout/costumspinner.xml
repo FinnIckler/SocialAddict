@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/SelectedTimeLayoutText"
+        android:layout_width="68.7dp"
+        android:layout_height="16.7dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/back"
+        android:gravity="center_horizontal"
+        android:text="@string/selected_time"
+        android:textColor="#959595"
+        android:textSize="8.7sp" />

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright 2014 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<resources>
+    <string name="open_app_usage_setting">Open Apps with usage access settings</string>
+    <string name="time_span">"Time span: "</string>
+    <string name="explanation_access_to_appusage_is_not_enabled">Failed to retrieve app usage
+        statistics. You may need to enable access
+        for this app through Settings > Security > Apps with usage access
+    </string>
+    <string name="selected_time"> </string>
+    <string name="total_time">4h28m</string>
+    <string name="picked_up">65</string>
+    <string name="pick_header">PICKED UP</string>
+    <string name="pick_header_total">OVERALL USAGE</string>
+    <string name="Peak_header">PEAK TIME</string>
+    <string name="peak">8am - 9am</string>
+    <string name="peak_notification">Get better sleep before 11:00 PM!</string>
+    <string name="current_time_string">DAILY</string>
+    <string name="legend_today">Today</string>
+    <string name="legend_yesterday">Yesterday</string>
+    <string name="bed_time_header">BED TIME</string>
+    <string name="wake_up_time_header">WAKE UP TIME</string>
+    <string name="wake_time">08:00</string>
+    <string name="bed_time">23:15</string>
+    <string name="the_earliest_bed_time_header">THE EARLIEST BED TIME</string>
+    <string name="the_latest_fall_to_sleep_header">LATEST BED TIME</string>
+    <string name="earliest_bed_Time">22:35</string>
+    <string name="latest_bed_time">04:13</string>
+    <string name="longest_standby_time_header">LONGEST STANDBY TIME</string>
+    <string name="longest_single_use_header">LONGEST SINGLE USE</string>
+    <string name="longest_stand_by">3h20min</string>
+    <string name="longest_single_use">3h54min</string>
+</resources>

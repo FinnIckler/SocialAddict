@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="selected_time">Today</string>
+    <string name="total_time">4h28m</string>
+    <string name="pick_header">PICK</string>
+    <string name="Peak_header">PEAK TIME</string>
+    <string name="peak">8am - 9am</string>
+</resources>
