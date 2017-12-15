@@ -11,4 +11,5 @@ While the daily, weekly and yearly data is often accurate, trying to split the w
 etc. does not produce consistent results on every phone. This could be fixed by saving the daily data and using it to improve 
 the breakdown. The App also recognizes how often you pick up the phone while the App is active. The peak time is entirely 
 simulated and thus not quite finished, as it cannot be extracted from the UsageStats.  
+This App was build upon the Google Example AppUsageStatistics  
 Design by Hong Shu and Yi He, programming by Finn Ickler
